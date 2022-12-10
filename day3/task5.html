@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <button id="st" onclick="op()">OPen</button>
+    <button ></button> -->
+    <script>
+        
+         var neepage=window.document.open("newpage.html","","width=500 ,height=500")
+        neepage.document.write("type a message")
+    //   function op(){
+    //     var neepage=window.document.open("newpage.html","","width=500 ,height=500")
+    //     neepage.document.write("type a message")
+    //   }
+      function cls(){
+       neepage.close();
+      }
+      setTimeout(cls,5000);
+    </script>
+</body>
+</html>

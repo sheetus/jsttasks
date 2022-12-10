@@ -1,0 +1,34 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task2</title>
+</head>
+<body>
+    <button onclick="window.setInterval(aler,1000)">check</button>
+
+</body>
+    <script>
+        // window.setInterval(alert("hi",10));
+        var time= new Date; 
+        // time=time.getTime();
+        var Local=time.toLocaleTimeString();
+        console.log(time);
+        console.log(Local);
+ function aler(){
+    window.alert("Oclock start");
+    setInterval(tm,1000);
+    // alert(time.toLocaleTimeString)
+// alert(Local);
+  }
+  function tm(){
+    console.log(time);
+  }
+  
+
+//   window.setInterval(alert(Local),1000);
+  
+    </script>
+</html>

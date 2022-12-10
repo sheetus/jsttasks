@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Show</title>
+</head>
+
+<body>
+    <h1>Slide Show</h1>
+    <button onclick="Next();">Next</button><button onclick="start();">SlideShow</button><button
+        onclick="stop();">Stop</button><button onclick="pre();">Previous</button>
+    <br>
+    <img src="../TasksResource/SlideShow/1.jpg" alt="" width="300px" id="im">
+    <script>
+        var ims = ["../TasksResource/SlideShow/1.jpg", "../TasksResource/SlideShow/2.jpg", "../TasksResource/SlideShow/3.jpg", "../TasksResource/SlideShow/4.jpg", "../TasksResource/SlideShow/5.jpg", "../TasksResource/SlideShow/6.jpg"]
+        var setIntID;
+        // setIntID=setInterval(
+        //     function SlideShow(){
+        //         var c=Math.floor(Math.random()*ims.length);
+        //         var image=document.getElementById("im");
+        //         image.src=ims[c];
+        //         c++
+        //         if(c>ims.length-1){
+        //             c=0;
+        //         }
+        //     },1000
+        // )
+        var c = 0;
+        function start() {
+            // var c=0
+            setIntID = setInterval(
+                function () {
+                    // var c = Math.floor(Math.random() * ims.length);
+                    var image = document.getElementById("im");
+                    image.src = ims[c];
+                    c++;
+                    console.log(c);
+                    if (c > ims.length - 1) {
+                        c = 0;
+                    }
+                }, 1000
+            )
+        }
+        function stop() {
+            clearInterval(setIntID);
+        }
+        function pre() {
+            // var c = Math.floor(Math.random() * ims.length);
+            var image = document.getElementById("im");
+            image.src = ims[c];
+            c--;
+            console.log(c);
+            if(c<ims.length-1){
+                c=1;
+            }
+        
+        }
+        function Next() {
+            // var c = Math.floor(Math.random() * ims.length);
+            var image = document.getElementById("im");
+            image.src = ims[c];
+            c++;
+            console.log(c);
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="imdive"></div>
+    <script>
+        for (i = 0; i < 5; i++) {
+            var image = document.createElement("img");
+            image.setAttribute("src", "marble1.jpg");
+            var div = document.getElementById("imdive");
+            image.setAttribute("onmouseleave", "onleav()");
+            image.setAttribute("onmouseover","onTouch()")
+            div.appendChild(image);
+        }
+        var play;
+        var light = 0;
+        var imRy = document.querySelectorAll("img");
+        console.log(imRy);
+        function move() {
+             play = setInterval(
+                function () {
+                    if (light < imRy.length) {
+                        imRy[light++].src = "marble3.jpg";
+                        imRy[light - 2].src = "marble1.jpg";
+                    }
+                    else {
+                        imRy[imRy - 1].src = "marble1.jpg";
+                        light = 0;
+                    }
+                }
+
+                , 2000)
+
+        }
+        move();
+        function onTouch() {
+            clearInterval(play);
+        }
+        function onleav() {
+            move();
+        }
+        
+
+    </script>
+
+</body>
+
+</html>

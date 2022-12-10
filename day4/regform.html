@@ -1,0 +1,66 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <form action="#" method="post">
+        <label for="nm">Full name</label>
+        <input type="text" name="nm" id="nm" onfocus="changeBorder()" onblur="blu()">
+        <small style="display: none;" id="err">invalid name</small>
+        <br>
+        <label for="pw">Password</label>
+        <input type="password" name="pw" id="pw">
+        <br>
+        <label for="rpw">Repeat Password</label>
+        <input type="password" name="rpw" id="rpw" onmouseleave="pasVal()"><span style="display: none;"
+            id="nomatch">password and repeat password should be the same</span>
+        <br>
+        <input type="checkbox" name="cb" id="cb">
+        <label for="cb">I accept the terms and conditions</label>
+        <br>
+    </form>
+    <script>
+
+        var x = document.getElementById("nm");
+        x.placeholder = "Enter yourname"
+        console.log(x);
+        function changeBorder() {
+            x.style.border = "solid red 5px";
+        }
+        function blu() {
+            x.style.border = "none"
+            var xv = x.value;
+            if (xv.length < 3 || xv == 0) {
+                var dis = document.getElementById("err").style.display = "block";
+                var dis = document.getElementById("err").style.color = "red";
+            }
+            else {
+                var dis = document.getElementById("err").style.display = "none";
+            }
+        }
+       
+        
+        // pas1=pas1.value;
+        console.log(pas1);
+        // var pasR = document.getElementById("rpw").value;
+        function pasVal() {
+            var pas1 = document.getElementById("pw").value;
+            var pasR=document.getElementById("rpw").value;
+            if (pas1 !== pasR) {
+                document.getElementById("nomatch").style.display = "block";
+                document.getElementById("nomatch").style.color = "red";
+            }
+            else {
+                document.getElementById("nomatch").style.display = "none";
+            }
+        }
+
+    </script>
+</body>
+
+</html>

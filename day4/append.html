@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="d"></div>
+</body>
+<script> 
+ var image=document.createElement("img");
+ image.setAttribute("src","https://photoshopstar.com/media/2009/06/car_moving-_14.jpg");
+ 
+ var div=document.getElementById("d");
+ div.appendChild(image);
+  var nNode=document.createElement("h1");
+
+
+//   document.getElementById("nod0").value="hello"
+  div.appendChild(nNode);
+  nNode.setAttribute("id","nod0");
+  document.getElementById("nod0").innerHTML="Hello Hello ";
+ div.insertBefore(nNode,div.children[0])
+ var btn=document.createElement("button");
+ btn.setAttribute("id","remove");
+ btn.setAttribute("onclick","remove()");
+
+ div.appendChild(btn);
+document.getElementById("remove").innerHTML="Remove";
+// document.write(div.childNodes.length)
+ console.log(div);
+
+function remove(){
+   div.removeChild(image);
+}
+alert(div.childNodes.length);
+</script>
+</html>

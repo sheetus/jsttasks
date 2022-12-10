@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            list-style: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <p id="pr">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis autem voluptate ad placeat quo
+        exercitationem, rem, modi quia, magni vel ab! Ab deleniti rerum totam voluptatibus porro architecto nobis esse.
+    </p>
+    <div id="choices" style="display: flex;">
+        <ul id="font-family" style="list-style:none ;">
+            <li>
+                <h4>Font-family</h4>
+            </li>
+            <li><input type="radio" name="font-family" value="Arial" onclick="fonFam();">Arial</li>
+            <li><input type="radio" name="font-family" value="Georgia" onclick="fonFam();">georgia</li>
+            <li><input type="radio" name="font-family" value="impact" onclick="fonFam();">impact</li>
+            <li><input type="radio" name="font-family" value="	Times New Roman" onclick="fonFam();">times new roman</li>
+            <li><input type="radio" name="font-family" value="verdana" onclick="fonFam();">verdana</li>
+        </ul>
+        <ul>
+            <li>
+                <h4>Text Align</h4>
+            </li>
+            <li><input type="radio" name="text-align" id="text-align" value="left" onclick="textAlgn();">Left</li>
+            <li><input type="radio" name="text-align" id="text-align" value="center" onclick="textAlgn();">Center</li>
+            <li><input type="radio" name="text-align" id="text-align" value="right" onclick="textAlgn();">right</li>
+            <li><input type="radio" name="text-align" id="text-align" value="justify" onclick="textAlgn();">justify</li>
+        </ul>
+        <ul>
+            <li>
+                <h4>line height</h4>
+            </li>
+            <li><input type="radio" name="lh" id="lh" value="normal" onclick="lineH()">normal</li>
+            <li><input type="radio" name="lh" id="lh" value="10px" onclick="lineH()">10px</li>
+            <li><input type="radio" name="lh" id="lh"value="15px" onclick="lineH()">15px</li>
+            <li><input type="radio" name="lh" id="lh" value="20px" onclick="lineH()">20px</li>
+        </ul>
+        <ul>
+            <li>
+                <h4>letter spacing</h4>
+            </li>
+            <li><input type="radio" name="ls" id="ls" value="normal" onclick="letSpace()">normal</li>
+            <li><input type="radio" name="ls" id="ls"value="-1px" onclick="letSpace()">-1px</li>
+            <li><input type="radio" name="ls" id="ls"value="2px" onclick="letSpace()">2px</li>
+            <li><input type="radio" name="ls" id="ls" value="3px" onclick="letSpace()">3px</li>
+        </ul>
+        <ul>
+            <li>
+                <h4>text transform</h4>
+            </li>
+            <li><input type="radio" name="tt" id="tt" value="none" onclick="tran()">none</li>
+            <li><input type="radio" name="tt" id="tt" value="capitalize" onclick="tran()">capitalize</li>
+            <li><input type="radio" name="tt" id="tt" value="uppercase"  onclick="tran()">uppercase</li>
+            <li><input type="radio" name="tt" id="tt" value="lowercase"  onclick="tran()">lowercase</li>
+        </ul>
+        <ul>
+            <li>
+                <h4> text decoration</h4>
+            </li>
+            <li><input type="radio" name="td" id="td" value="none" onclick="textDecro();">none</li>
+            <li><input type="radio" name="td" id="td" value="line-through" onclick="textDecro();">line-through</li>
+            <li><input type="radio" name="td" id="td" value="overline" onclick="textDecro();">overline</li>
+            <li><input type="radio" name="td" id="td" value="underline" onclick="textDecro();">underline</li>
+        </ul>
+        <!-- <ul>
+            <li>
+                <h4></h4>
+            </li>
+            <li><input type="radio" name="" id="" value=""></li>
+            <li><input type="radio" name="" id="" value=""></li>
+            <li><input type="radio" name="" id="" value=""></li>
+            <li><input type="radio" name="" id="" value=""></li>
+        </ul> -->
+    </div>
+    <script src="textStyle.js"></script>
+</body>
+
+</html>

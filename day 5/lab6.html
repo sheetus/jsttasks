@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    
+        <label for="Fn">First Name</label>
+        <input type="text" name="Fn" id="Fn">
+
+        <label for="Ln">Last Name</label>
+        <input type="text" name="Ln" id="Ln">
+    <label for="pw">Password</label>
+    <input type="password" name="pw" id="pw">
+    <button onclick="sub()">Sub</button>
+    <button onclick="del()">del</button>
+   <div id="todo"></div>
+    <script>
+function sub(){
+    var fn=document.getElementById("Fn").value;
+    console.log(fn);
+    var ln=document.getElementById("Ln").value;
+    var pass=document.getElementById("pw").value;
+   
+var user=[];
+JSON.stringify(user)
+user.push(fn,ln,pass);
+localStorage.setItem("UserInfo",JSON.stringify(user)) ;
+document.cookie="firstName=Shady ,expires=Thu, 18 Dec 2025 12:00:00 UTC; path=/";
+}
+function del(){
+    document.cookie = "firstName=; expires=Thu, 01 Jan 2005 23:00:00 UTC; path=/;";
+}
+
+///////
+
+var tod= new XMLHttpRequest();
+tod.open( "GET","https://dummyjson.com/todos");
+tod.send();
+tod.onreadystatechange=function(){
+    if(tod.readyState==4&&tod.status==200){
+        var todo=JSON.parse(tod.responseText).todos;//هنا todos هي عبارة عن اول كلمة
+        console.log(todo);
+        for( var i=0; i<todo.length; i++){
+            if(todo[i].completed==true){
+                document.getElementById("todo").innerHTML+=`<h1>${todo[i].todo}</h1>`
+            }
+        }
+    }
+}
+
+    </script>
+</body>
+</html>
